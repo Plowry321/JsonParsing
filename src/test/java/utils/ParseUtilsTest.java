@@ -18,7 +18,7 @@ class ParseUtilsTest {
 
     @Test
     void parseJsonToPersonDirect_SuccessWithDifferentKeyValues() throws ParameterIsNotJsonStringException {
-        String sampleString = "{'first-name':'Huseyin','last-name':'Ergin','year':1986}";
+        String sampleString = "{'firstName':'Huseyin','lastName':'Ergin','birthYear':1986}";
         var resultingPerson = ParseUtils.parseJsonToPersonDirect(sampleString);
         assertEquals("Huseyin", resultingPerson.getFirstName());
         assertEquals("Ergin", resultingPerson.getLastName());
